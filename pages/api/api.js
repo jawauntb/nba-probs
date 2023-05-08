@@ -5,7 +5,7 @@ export default async function handler(req, res) {
 
   const encodedCredentials = Buffer.from("6b43c070-8ee5-43f3-add5-b5cdbe:MYSPORTSFEEDS").toString("base64");
   const url = `https://api.mysportsfeeds.com/v2.1/pull/nba/2021-2022-regular/player_stats_totals.json?player=${encodeURIComponent(playerName.replace(" ", "-").toLowerCase())}`;
-
+  // first push
   try {
     const response = await axios.get(url, {
       headers: {
